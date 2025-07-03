@@ -1,7 +1,5 @@
 body {
     font-family: "Montserrat", sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #000;
     color: #fff;
     overflow: hidden;
@@ -12,7 +10,7 @@ body {
     display: grid;
     height: 100vh;
     grid-template-rows: auto 1fr auto;
-    grid-template-columns: 350px 1fr;
+    grid-template-columns: 360px 1fr;
     grid-gap: 8px;
 }
 
@@ -111,6 +109,114 @@ body {
 
 .toggle-library button:hover{
     background-color: #2a2a2a;
+}
+
+.library-search {
+    display: flex;
+    padding: 2px 16px 0;
+    justify-content: space-between;
+}
+
+.library-search i {
+    align-items: center;
+    font-size: 0.8rem;
+    padding: 6px 12px 4px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    margin-bottom: 18px;
+}
+
+.library-search i:hover{
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.recents-library{
+    opacity: 0.7;
+    transition: all 0.1s ease;
+}
+
+.recents-library a {
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.1s ease;
+}
+
+.recents-library:hover {
+    opacity: 1;
+    transform: scale(1.01);
+}
+
+.row-button{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    cursor: pointer;
+    margin: 0px 15px;
+    border-radius: 8px;
+}
+
+.row-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #450af5, #c4efd9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row-icon i {
+    font-size: 20px;
+}
+
+.row-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.row-info .title{
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.row-info .subtext {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #b3b3b3;
+    font-size: 0.8rem;
+}
+
+.row-button .subtext i{
+    color: green;
+    transform: rotate(40deg);
+}
+
+.row-button:hover{
+    background-color: #1F1F1F;
+}
+
+.row-button:hover .row-icon{
+    background: linear-gradient(135deg, #450af5c1, #c4efd9b3);
+}
+
+.row-button .row-icon .fa-play{
+    display: none;
+}
+
+.row-button:hover .row-icon .fa-heart{
+    display: none;
+}
+
+.row-button:hover .row-icon .fa-play{
+    display: contents;
 }
 
 .main-content {
