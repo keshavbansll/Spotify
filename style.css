@@ -599,6 +599,21 @@ a{
     display: contents;
 }
 
+@media (max-width: 768px) {
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    .main-content{
+        justify-content: center;
+    }
+}
+
 /* MAIN CONTENT */
 
 .main-content {
