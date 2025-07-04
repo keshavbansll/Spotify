@@ -39,8 +39,9 @@ body {
 }
 
 .logo {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.1rem;
+    height: 2.1rem;
+    cursor: pointer;
 }
 
 .nav-left i {
@@ -81,14 +82,15 @@ body {
     opacity: 0.7;
     cursor: pointer;
     transition: all 0.2s ease;
-    background-color: #1F1F1F;
     cursor: pointer;
-    border-radius: 50%;
-    padding: 10px;
+    
 }
 
 .nav-search .fa-magnifying-glass {
     margin: 0 6px 0 6px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #1F1F1F;
 }
 
 .nav-search .fa-folder-open {
@@ -238,6 +240,10 @@ body {
     transform: scale(1.01);
 }
 
+#sidebar-toggle{
+    display: none;
+}
+
 .sidebar{
     background-color: #121212;
     border-top-left-radius: 8px;
@@ -254,13 +260,43 @@ body {
     border-top-right-radius: 8px;
 }
 
-.library-header h4 {
-    margin: 0 0 0 12px;
+.library-title {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.library-title i {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 900;
+    margin-right: 8px;
+    cursor: pointer;
+
+    opacity: 0;
+    transform: translate(-8px);
+    transition: all 0.3s ease;
+}
+
+.library-title h4 {
+    margin: 0 0 0 0px;
     padding: 0;
     font-size: 1rem;
     font-weight: 700;
     justify-content: flex-start;
     cursor: pointer;
+    transform: translate(-1rem);
+    transition: all 0.3s ease;
+}
+
+.library-title:hover i{
+    opacity: 1;
+    transform: translate(0);
+}
+
+.library-title:hover h4{
+    transform: translate(0);
 }
 
 .library-actions {
@@ -369,7 +405,19 @@ body {
     transform: scale(1.01);
 }
 
-.row-button{
+.library {
+    overflow: auto;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* BUTTON ONE */
+
+.row-button-one{
     display: flex;
     align-items: center;
     gap: 12px;
@@ -379,7 +427,7 @@ body {
     border-radius: 8px;
 }
 
-.row-icon {
+.row-icon-liked-songs {
     width: 48px;
     height: 48px;
     border-radius: 4px;
@@ -389,22 +437,22 @@ body {
     justify-content: center;
 }
 
-.row-icon i {
+.row-icon-liked-songs i {
     font-size: 20px;
 }
 
-.row-info {
+.row-button-one .row-info {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.row-info .title{
+.row-button-one .row-info .title{
     font-weight: 600;
     font-size: 0.9rem;
 }
 
-.row-info .subtext {
+.row-button-one .row-info .subtext {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -412,30 +460,102 @@ body {
     font-size: 0.8rem;
 }
 
-.row-button .subtext i{
+.row-button-one .subtext i{
     color: green;
     transform: rotate(40deg);
 }
 
-.row-button:hover{
+.row-button-one:hover{
     background-color: #1F1F1F;
 }
 
-.row-button:hover .row-icon{
+.row-button-one:hover .row-icon{
     background: linear-gradient(135deg, #450af5c1, #c4efd9b3);
 }
 
-.row-button .row-icon .fa-play{
+.row-button-one .row-icon-liked-songs .fa-play{
     display: none;
 }
 
-.row-button:hover .row-icon .fa-heart{
+.row-button-one:hover .row-icon-liked-songs .fa-heart{
     display: none;
 }
 
-.row-button:hover .row-icon .fa-play{
+.row-button-one:hover .row-icon-liked-songs .fa-play{
     display: contents;
 }
+
+/* BUTTON TWO */
+
+.row-button-two{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    cursor: pointer;
+    margin: 0px 15px;
+    border-radius: 8px;
+}
+
+.row-icon-default {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row-icon-default i {
+    font-size: 20px;
+}
+
+.row-button-two .row-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.row-button-two .row-info .title{
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.row-button-two .row-info .subtext {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #b3b3b3;
+    font-size: 0.8rem;
+}
+
+.row-button-two .subtext i{
+    color: green;
+    transform: rotate(40deg);
+}
+
+.row-button-two:hover{
+    background-color: #1F1F1F;
+}
+
+.row-button-two:hover .row-icon{
+    background: linear-gradient(135deg, #450af5c1, #c4efd9b3);
+}
+
+.row-button-two .row-icon-default .fa-play{
+    display: none;
+}
+
+.row-button-two:hover .row-icon-default .fa-circle-dot{
+    display: none;
+}
+
+.row-button-two:hover .row-icon-default .fa-play{
+    display: contents;
+}
+
+
 
 .main-content {
     overflow: auto;

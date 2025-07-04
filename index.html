@@ -25,11 +25,13 @@
       <div class="nav-bar">
         <div class="nav-container">
           <div class="nav-left">
-            <img
-              src="assets/logo-white.png"
-              alt="Spotify logo white"
-              class="logo"
-            />
+            <a href="#">
+              <img
+                src="assets/logo-white.png"
+                alt="Spotify logo white"
+                class="logo"
+              />
+            </a>
             <i class="fa-solid fa-house"></i>
           </div>
           <div class="nav-search">
@@ -54,9 +56,17 @@
       <!-- SIDEBAR -->
 
       <div class="sidebar">
+        <input id="sidebar-toggle" type="checkbox" />
+
         <!-- Library Header -->
+
         <div class="library-header">
-          <h4>Your Library</h4>
+          <div class="library-title">
+            <label for="sidebar-toggle">
+              <i class="fa-regular fa-square-caret-left"></i>
+            </label>
+            <h4>Your Library</h4>
+          </div>
           <div class="library-actions">
             <button class="create">
               <i class="fa-solid fa-plus"></i>Create
@@ -80,19 +90,39 @@
               <a href="#">Recents<i class="fa-solid fa-list"></i></a>
             </div>
           </div>
-          <div class="row-button">
-            <div class="row-icon">
-              <i class="fa-solid fa-heart"></i>
-              <i class="fa-solid fa-play"></i>
-            </div>
-            <div class="row-info">
-              <div class="title">Liked Songs</div>
-              <div class="subtext">
-                <i class="fa-solid fa-thumbtack"></i>
-                <span>Playlist • 34 songs</span>
+
+          <section class="buttons">
+            <!-- FIRST BUTTON -->
+
+            <div class="row-button-one">
+              <div class="row-icon-liked-songs">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <div class="row-info">
+                <div class="title">Liked Songs</div>
+                <div class="subtext">
+                  <i class="fa-solid fa-thumbtack"></i>
+                  <span>Playlist • 0 songs</span>
+                </div>
               </div>
             </div>
-          </div>
+
+            <!-- SECOND BUTTON -->
+
+            <div class="row-button-two">
+              <div class="row-icon-default">
+                <i class="fa-regular fa-circle-dot"></i>
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <div class="row-info">
+                <div class="title">Your Album</div>
+                <div class="subtext">
+                  <span>Album • 0 songs</span>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
 
