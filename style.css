@@ -10,14 +10,16 @@ body {
     display: grid;
     height: 100vh;
     grid-template-rows: auto 1fr auto;
-    grid-template-columns: 360px 1fr;
+    grid-template-columns: 380px 1fr;
     grid-gap: 8px;
 }
 
 .nav-bar {
+    position: sticky;
     background-color: #000;
     grid-column: 1 / -1;
-    height: 64px;
+    height: 50px;
+    padding-bottom: 8px;
 }
 
 .nav-container{
@@ -64,7 +66,6 @@ body {
     padding: 8px 12px;
     margin: 0px 24px;
     transition: all 0.2s ease;
-    height: 35px;
 }
 
 .nav-search:hover{
@@ -80,6 +81,10 @@ body {
     opacity: 0.7;
     cursor: pointer;
     transition: all 0.2s ease;
+    background-color: #1F1F1F;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 10px;
 }
 
 .nav-search .fa-magnifying-glass {
@@ -128,6 +133,7 @@ body {
     align-items: center;
     gap: 16px;
     margin-left: 100px;
+    margin-right: 20px;
 }
 
 .premium{
@@ -148,6 +154,45 @@ body {
 .premium:hover{
     background: #ffffffef;
     transform: scale(1.03);
+}
+
+@media (max-width:1320px) {
+    .premium {
+        display: none;
+    }
+    .install-app b {
+        display: none;
+    }
+    .nav-search input {
+        height: 20px;
+    }
+}
+
+@media (max-width:792px) {
+    .fa-user-group{
+        display: none;
+    }
+    .fa-circle-down {
+        display: none;
+    }
+    .nav-right {
+        margin-left: 10px;
+    }
+    .fa-folder-open {
+        display: none;
+    }
+}
+
+@media (max-width:620px) {
+    .nav-search input{
+        display: none;
+    }
+    .nav-search {
+        background: transparent;
+    }
+    .nav-left i{
+        margin-left: 2px;
+    }
 }
 
 .install-app {
