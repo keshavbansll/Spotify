@@ -99,6 +99,10 @@ a{
     background-color: #1F1F1F;
 }
 
+.nav-search:hover .fa-magnifying-glass{
+    background-color: #2a2a2a;
+}
+
 .nav-search .fa-folder-open {
     margin: 0 8px 0 0px;
     padding-left: 8px;
