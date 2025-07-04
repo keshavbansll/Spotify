@@ -32,7 +32,7 @@
                 class="logo"
               />
             </a>
-            <i class="fa-solid fa-house"></i>
+            <a href="index.html"><i class="fa-solid fa-house"></i></a>
           </div>
           <div class="nav-search">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -41,7 +41,9 @@
             <i class="fa-regular fa-folder-open"></i>
           </div>
           <div class="nav-right">
-            <button class="premium">Explore Premium</button>
+            <a href="https://www.spotify.com/in-en/premium/" class="premium"
+              >Explore Premium</a
+            >
             <button class="install-app">
               <i class="fa-regular fa-circle-down"></i>
               <b>Install App</b>
@@ -91,36 +93,77 @@
             </div>
           </div>
 
-          <section class="buttons">
-            <!-- FIRST BUTTON -->
+          <section class="library-content">
+            <div class="buttons">
+              <!-- FIRST BUTTON -->
 
-            <div class="row-button-one">
-              <div class="row-icon-liked-songs">
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-solid fa-play"></i>
+              <div class="row-button-one">
+                <div class="row-icon-liked-songs">
+                  <i class="fa-solid fa-heart"></i>
+                  <i class="fa-solid fa-play"></i>
+                </div>
+                <div class="row-info">
+                  <div class="title">Liked Songs</div>
+                  <div class="subtext">
+                    <i class="fa-solid fa-thumbtack"></i>
+                    <span>Playlist • 0 songs</span>
+                  </div>
+                </div>
               </div>
-              <div class="row-info">
-                <div class="title">Liked Songs</div>
-                <div class="subtext">
-                  <i class="fa-solid fa-thumbtack"></i>
-                  <span>Playlist • 0 songs</span>
+
+              <!-- SECOND BUTTON -->
+
+              <div class="row-button-two">
+                <div class="row-icon-default">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  <i class="fa-solid fa-play"></i>
+                </div>
+                <div class="row-info">
+                  <div class="title">Your Album</div>
+                  <div class="subtext">
+                    <span>Album • 0 songs</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <!-- SECOND BUTTON -->
+            <!-- Footer -->
 
-            <div class="row-button-two">
-              <div class="row-icon-default">
-                <i class="fa-regular fa-circle-dot"></i>
-                <i class="fa-solid fa-play"></i>
-              </div>
-              <div class="row-info">
-                <div class="title">Your Album</div>
-                <div class="subtext">
-                  <span>Album • 0 songs</span>
-                </div>
-              </div>
+            <div class="sidebar-footer">
+              <ul>
+                <li>
+                  <a
+                    href="https://www.spotify.com/in-en/legal/end-user-agreement/"
+                    >Legal</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.spotify.com/in-en/safetyandprivacy"
+                    >Safety & Privacy Center</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.spotify.com/in-en/legal/privacy-policy/"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.spotify.com/in-en/legal/cookies-policy/"
+                    >Cookies</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"
+                    >About Ads</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.spotify.com/in-en/accessibility"
+                    >Accessibility</a
+                  >
+                </li>
+              </ul>
             </div>
           </section>
         </div>
@@ -129,7 +172,7 @@
       <!-- MAIN CONTENT -->
 
       <div class="main-content">
-        <div>
+        <div class="categories-container">
           <ul class="categories">
             <li><a href="#">All</a></li>
             <li><a href="#">Music</a></li>
@@ -259,7 +302,21 @@
           </div>
         </div>
       </div>
-      <div class="music-player">music player</div>
+      <div class="music-player">
+        <div class="note">
+          <p><b>Preview of Spotify</b></p>
+          <p>
+            Sign up to get unlimited songs with occasional ads. No credit card
+            needed.
+          </p>
+        </div>
+
+        <a
+          href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F"
+          class="sign-up"
+          >Sign up for free</a
+        >
+      </div>
     </div>
   </body>
 </html>

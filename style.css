@@ -6,6 +6,11 @@ body {
     box-sizing: border-box;
 }
 
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
 .main{
     display: grid;
     height: 100vh;
@@ -410,12 +415,44 @@ body {
 
 .library {
     overflow: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.library-content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .buttons {
     display: flex;
     flex-direction: column;
     gap: 6px;
+}
+
+.sidebar-footer{
+    justify-self: flex-end;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+    border-top: 2px solid #ffffff33;
+    width: 90%;
+}
+
+.sidebar-footer ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.8rem;
+}
+
+.sidebar-footer ul a:hover{
+    text-decoration: underline;
 }
 
 /* BUTTON ONE */
@@ -566,10 +603,8 @@ body {
     padding: 1.5rem 1.5rem;
 }
 
-.songs-container{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+.categories-container{
+    position: sticky;
 }
 
 .categories {
@@ -591,11 +626,18 @@ body {
 .categories a:hover {
     background-color: #fff;
     color: #000;
+    text-decoration: underline;
 }
 
 .content-division {
     margin: 2rem 1.5rem;
     font-size: 1.5rem;
+}
+
+.songs-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .content-card{
@@ -674,7 +716,38 @@ body {
 }
 
 .music-player {
-    background-color: #000;
+    display: flex;
+    background: linear-gradient(135deg, #450af5 40%, #c4efd9, #0a74f5);
     grid-column: 1 / -1;
     height: 72px;
+    justify-content: space-between;
+    padding: 0 1rem 1.2rem 1rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.note {
+    display: flex;
+    flex-direction: column;
+}
+
+.note p {
+    margin-bottom: 0;
+}
+
+.sign-up{
+    background-color: #fff;
+    border: none;
+    border-radius: 9999px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 12px 12px;
+    color: #000;
+    transition: all 0.2s ease;
+}
+
+.sign-up:hover{
+    background: #ffffffef;
+    transform: scale(1.03);
 }
