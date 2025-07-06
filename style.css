@@ -687,13 +687,19 @@ a{
 }
 
 .artist{
-    border-radius: 50%;
-    box-shadow: 0 2px 20px #000000c0;
     margin-bottom: 6px;
     transition: all 0.2s ease;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin: 0.4rem 0 0.6rem 0;
 }
 
-.play-overlay {
+.artist-image{
+    border-radius: 50%;
+    box-shadow: 0 2px 20px #000000c0;
+}
+
+.fa-circle-play {
     position: absolute;
     left: 70%;
     top: 55%;
@@ -707,7 +713,7 @@ a{
     opacity: 0;
 }
 
-.content-card:hover .play-overlay {
+.content-card:hover .fa-circle-play {
     opacity: 1;
     transform: translate(-0,-20%);
 }
@@ -720,10 +726,8 @@ a{
     margin: 0.8rem 0 0 0;
 }
 
-.artist {
-    font-size: 0.8rem;
-    opacity: 0.7;
-    margin: 0.4rem 0 0.6rem 0;
+.song-name:hover, .artist-name:hover, .artist:hover {
+    text-decoration: underline;
 }
 
 .content-card:hover {
